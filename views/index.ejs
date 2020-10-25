@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    <nav id = "navbar" >
+      <div class = "navlinks">
+        <a class = "navLink" href = "#home" input type="button" onclick = "history.back()">Home</a>
+        <a class = "navLink" href = "#dailyReminders">Daily Reminders</a>
+        <a class = "navLink" href = "#calendar" >Calendar</a>
+        <a class = "navLink" href = "/blank">Journal </a>
+
+      </div>
+    </nav>
+    </header>
+  
+    <img src = "/images/Banner.png" alt = "banner Image" id = "home" class = "bannerImg">
+
+     <div id = "calendar">
+      <div class ="head-container">
+      <div class = "leftLine decorLine"></div>
+      <div class="title"> Calendar </div>
+      <div class = "rightLine decorLine"></div>
+    </div>
+    </div>
+
+    <div>
+      <!--  calendar code here -->
+      <div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>November<br><span style="font-size:18px">2020</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Sun</li>
+  <li>Mon</li>
+  <li>Tues</li>
+  <li>Wed</li>
+  <li>Thurs</li>
+  <li>Fri</li>
+  <li>Sat</li>
+
+</ul>
+
+<ul class="days">
+  
+  <li id = "Nov1Btn"><span class = "hoverDate1Num">1</span></li>
+  <li id = "Nov2Btn"><span class = "hoverDate1Num">2</span></li>
+  <li id = "Nov3Btn"><span class = "hoverDate1Num">3</span></li>
+  <li id = "Nov4Btn"><span class = "hoverDate1Num">4</span></li>
+  <li id = "Nov5Btn"><span class = "hoverDate1Num">5</span></li>
+  <li id = "Nov6Btn"><span class = "hoverDate1Num">6</span></li>
+  <li id = "Nov7Btn"><span class = "hoverDate1Num">7</span></li>
+  <li id = "Nov8Btn"><span class = "hoverDate1Num">8</span></li>
+  <li id = "Nov9Btn"><span class = "hoverDate1Num">9</span></li>
+  <li id = "Nov10Btn"><span class = "hoverDate">10</span></li>
+  <li id = "Nov11Btn"><span class = "hoverDate">11</span></li>
+  <li id = "Nov12Btn"><span class = "hoverDate">12</span></li>
+  <li id = "Nov13Btn"><span class = "hoverDate">13</span></li>
+  <li id = "Nov14Btn"><span class = "hoverDate">14</span></li>
+  <li id = "Nov15Btn"><span class = "hoverDate">15</span></li>
+  <li id = "Nov16Btn"><span class = "hoverDate">16</span></li>
+  <li id = "Nov17Btn"><span class = "hoverDate">17</span></li>
+  <li id = "Nov18Btn"><span class = "hoverDate">18</span></li>
+  <li id = "Nov19Btn"><span class = "hoverDate">19</span></li>
+  <li id = "Nov20Btn"><span class = "hoverDate">20</span></li>
+  <li id = "Nov21Btn"><span class = "hoverDate">21</span></li>
+  <li id = "Nov22Btn"><span class = "hoverDate">22</span></li>
+  <li id = "Nov23Btn"><span class = "hoverDate">23</span></li>
+  <li id = "Nov24Btn"><span class = "hoverDate">24</span></li>
+  <li id = "Nov25Btn"><span class = "hoverDate">25</span></li>
+  <li id = "Nov26Btn"><span class = "hoverDate">26</span></li>
+  <li id = "Nov27Btn"><span class = "hoverDate">27</span></li>
+  <li id = "Nov28Btn"><span class = "hoverDate">28</span></li>
+  <li id = "Nov29Btn"><span class = "hoverDate">29</span></li>
+  <li id = "Nov30Btn"><span class = "hoverDate">30</span></li>
+
+</ul>
+
+    </div>
+
+  <!-- The Modal -->
+  <div id="Nov1" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h3 class="Heading">November 1st</h3>
+      </div>
+      <div class="modal-body">
+      <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL" class = "todoUL">
+  <li class = "listItem">Hit the gym</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Meet George</li>
+  <li class = "listItem">Buy eggs</li>
+  <li class = "listItem">Read a book</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+
+            
+      </div>
+    </div>
+  </div>
+    <!-- The Modal -->
+  <div id="Nov2" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close2">&times;</span>
+        <h3 class="Heading">November 2nd</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput2" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL2" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Code!</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+    
+<div id="Nov3" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close3">&times;</span>
+        <h3 class="Heading">November 3rd</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput3" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL3" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov4" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close4">&times;</span>
+        <h3 class="Heading">November 4th</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput4" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL4" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov5" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close5">&times;</span>
+        <h3 class="Heading">November 5th</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput5" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL5" class = "todoUL">
+  <li class = "listItem">Hit the gym</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Meet George</li>
+  <li class = "listItem">Buy eggs</li>
+  <li class = "listItem">Read a book</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+       
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov6" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close6">&times;</span>
+        <h3 class="Heading">November 6th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput6" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL6" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov7" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close7">&times;</span>
+        <h3 class="Heading">November 7th</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput7" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL7" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov8" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close8">&times;</span>
+        <h3 class="Heading">November 8th</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput8" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL8" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov9" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close9">&times;</span>
+        <h3 class="Heading">November 9th</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput9" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL9" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov10" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close10">&times;</span>
+        <h3 class="Heading">November 10th</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput10" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL10" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov11" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close11">&times;</span>
+        <h3 class="Heading">November 11th</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput11" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL11" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov12" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close12">&times;</span>
+        <h3 class="Heading">November 12th</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput12" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL12" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov13" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close13">&times;</span>
+        <h3 class="Heading">November 13th</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput13" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL13" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov14" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close14">&times;</span>
+        <h3 class="Heading">November 14th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput14" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL14" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov15" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close15">&times;</span>
+        <h3 class="Heading">November 15th</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput15" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL15" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov16" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close16">&times;</span>
+        <h3 class="Heading">November 16th</h3>
+      </div>
+      <div class="modal-body">
+        <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput16" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL16" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov17" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close17">&times;</span>
+        <h3 class="Heading">November 17th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput17" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL17" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov18" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close18">&times;</span>
+        <h3 class="Heading">November 18th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput18" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL18" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov19" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close19">&times;</span>
+        <h3 class="Heading">November 19th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput19" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL19" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov20" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close20">&times;</span>
+        <h3 class="Heading">November 20th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput20" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL20" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov21" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close21">&times;</span>
+        <h3 class="Heading">November 21st</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput21" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL21" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov22" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close22">&times;</span>
+        <h3 class="Heading">November 22nd</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput22" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL22" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov23" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close23">&times;</span>
+        <h3 class="Heading">November 23rd</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput23" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL23" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov24" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close24">&times;</span>
+        <h3 class="Heading">November 24th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput24" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL24" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+  
+  <div id="Nov25" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close25">&times;</span>
+        <h3 class="Heading">November 25th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput25" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL25" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov26" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close26">&times;</span>
+        <h3 class="Heading">November 26th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput26" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL26" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov27" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close27">&times;</span>
+        <h3 class="Heading">November 27th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput27" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL27" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov28" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close28">&times;</span>
+        <h3 class="Heading">November 28th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput28" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL28" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov29" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close29">&times;</span>
+        <h3 class="Heading">November 29th</h3>
+      </div>
+      <div class="modal-body">
+<div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput29" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL29" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+  <div id="Nov30" class="modal">
+
+    <div class="modal-content">
+    <!-- Modal content -->
+          
+      <div class="modal-header">
+        <span class="close30">&times;</span>
+        <h3 class="Heading">November 30th</h3>
+      </div>
+      <div class="modal-body">
+          <div id="myDIV" class="header">
+  <h2>My To Do List</h2>
+  <input type="text" id="myInput30" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL30" class = "todoUL">
+  <li class = "listItem">Buy milk</li>
+  <li class = "listItem" class="checked">Pay bills</li>
+  <li class = "listItem">Call mom</li>
+  <li class = "listItem">Meet Lisa</li>
+  <li class = "listItem">Email boss</li>
+  <li class = "listItem">Organize office</li>
+</ul>
+            
+      </div>
+    </div>
+  </div>
+
+
+    <div id = "dailyReminders">
+      <div class ="head-container">
+      <div class = "leftLine decorLine"></div>
+      <div class="title"> Daily Reminders </div>
+      <div class = "rightLine decorLine"></div>
+    </div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class= "slideContent">
+      <h2 class = "quote">"Be the Change You Wish to See in the World"</h2>
+
+      <h1 class = "lifeTipHeader">Life Tip</h1>
+      <h2 class = "tip">Remember to stay hydrated! Doctors recommend 8 glasses a day! </h2>
+
+    </div>
+   
+    
+  </div>
+
+  <div class="mySlides fade">
+
+   
+    
+  </div>
+
+  <div class="mySlides fade">
+    
+    
+    
+  </div>
+
+  <!-- Next and previous buttons -->
+  
+</div>
+
+
+
+
+
+    <script src="javaScript/script.js"></script>
+  </body>
+</html>
+
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

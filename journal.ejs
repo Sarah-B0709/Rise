@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+  <link rel='stylesheet' type='text/css' href='/css/style.css' />
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:bold' rel='stylesheet'>
+
+</head>
+
+<body>
+  <header>
+    <%- include("partials/navbar"); %>
+		<img class= "banner" src="images/JournalHeader.png" />
+  </header>
+  
+
+
+  <!-- header for comment section -->
+    <div class ="head-container">
+      <div class = "leftLine decorLine"></div>
+      <div class="title"> Jounal </div>
+      <div class = "rightLine decorLine"></div>
+    </div>
+
+
+
+  <form id="add-comment" action="/addcomment" method="POST">
+		<label for="name" class="nameLabel">DATE:</label>
+
+    <input type="text" id="name" name="name" class="name-form"/><br/>
+    
+    <label for="comment" class="comment-form">COMMENT:</label></br>
+    <textarea id="comment" rows="4" cols="50" name="comment" form="add-comment" class="commentTextArea"/></textarea><br/>
+    
+    
+    <input type="submit" class="poop4" value="submit"/>
+  </form>
+  <img src = "/images/Comments.PNG" alt="people communitcating online" id="comments-img">
+  </br>
+  
+  <div id="comments">
+  <% if (comments) { %>
+  <ul>
+  <% for (let c of comments) { %>
+  <li class="comment list"><h4><%= c.comment %></h4> <p id = "name">- <%= c.name %></p></li>
+  <% } %>
+  </ul>
+  <% } %>
+  </div>
+
+  
+  <%- include("partials/footer"); %>
+  
+</body>
+
+</html>

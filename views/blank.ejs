@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+  <link rel='stylesheet' type='text/css' href='/style.css' />
+
+  <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <nav id = "navbar" >
+      <div class = "navlinks">
+        <a class = "navLink" href = "/#home">Home</a>
+        <a class = "navLink" href = "/#dailyJournal">Daily Reminders</a>
+        <a class = "navLink" href = "/#calender">Calendar</a>
+        <a class = "navLink" href = "/blank">Journal</a>
+      </div>
+    </nav>
+		<img class= "banner" src="images/JournalHeader.png" />
+  </header>
+  
+
+
+  <!-- header for comment section -->
+    <div class ="head-container">
+      <div class = "leftLine decorLine"></div>
+      <div class="title"> Journal </div>
+      <div class = "rightLine decorLine"></div>
+    </div>
+
+
+
+  <form id="add-comment" action="/addcomment" method="POST">
+    <h1 id = "journalEntry">Journal Entry</h1>
+		<label for="name" class="nameLabel">Date:</label> 
+    </br>
+    <input type="text" id="name" name="name" class="name-form"/>
+    <div id = "form-space"></div></br>
+    <label for="comment" class="comment-form">What Made You Happy Today:</label>
+    </br>
+    <textarea id="comment" rows="4" cols="50" name="comment" form="add-comment" class="commentTextArea"/></textarea></br>
+    
+    
+    <input type="submit" class="poop4" value="submit"/>
+  </form>
+  
+  <img class = "positivityImg" src = "images/Positivity.png" alt = "radiate positivity">
+  <div class = "space"></div>
+  
+  <div id="comments">
+  <% if (comments) { %>
+  <ul>
+  <% for (let c of comments) { %>
+  <li class="comment list"><div class = "niceBkgrnd"><h4><%= c.comment %></h4></div> <p id = "name">- <%= c.name %></p></li>
+  <% } %>
+  </ul>
+  <% } %>
+  </div>
+
+  
+  <%- include("partials/footer"); %>
+  
+</body>
+
+</html>
